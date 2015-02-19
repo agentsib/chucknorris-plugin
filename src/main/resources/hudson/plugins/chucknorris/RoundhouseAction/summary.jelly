@@ -3,15 +3,15 @@
         <td><img src="${rootURL}/plugin/chucknorris/images/icon.jpg" width="48" height="48" alt="${it.displayName} Icon"/></td>
         <td style="vertical-align:middle"><j:out value="${it.fact}"/></td>
     </tr>
-    <script>
-        Element.setStyle($('main-table'), {
-            backgroundImage: 'none'
-        });
-        Element.setStyle($('main-panel'), {
-            backgroundImage: 'url(${rootURL}/plugin/chucknorris/images/<j:out value="${it.style.toString().toLowerCase()}"/>.jpg)',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'bottom right',
-            paddingBottom: '270px'
-        });
-    </script>
+    <style>
+	#main-table {
+		background-image: none;
+	}
+	#main-panel {
+		background-image: url(${rootURL}/plugin/chucknorris/images/<j:out value="${it.style.toString().toLowerCase()}"/>.jpg);
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		background-padding: 270px;
+	}
+    </style>
 </j:jelly>
